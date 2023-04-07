@@ -20,6 +20,9 @@ const bike ={
         }
     }
 };
-bike.frontGearIndex,
-bike.transmission.frontGearTeeth,
-bike.calculateGearRatio(),
+// bike.frontGearIndex,
+// bike.transmission.frontGearTeeth,
+// bike.calculateGearRatio(),
+// bike["frontGearIndex"],
+// bike["transmission"]["frontGearTeeth"],
+// bike["calculateGearRatio"]()
