@@ -18,18 +18,18 @@ console.log(bike1.currentGear);
 
 //Create object with Constructor
 
-function Bike(gears, startGear){
+function Bike1(gears, startGear){
     this.gears=gears;
     this.currentGear=startGear;
 }
-Bike.prototype.changeGear = function(direction,changeBy){
+Bike1.prototype.changeGear = function(direction,changeBy){
     if(direction ==='up'){
         this.currentGear += changeBy;
     }else {
         this.currentGear -= changeBy;
     }
 }
-const bike = new Bike(10,3);
+const bike = new Bike1(10,3);
 console.log(bike.gears);
 console.log(bike.currentGear);
 bike.changeGear('up',1);
@@ -80,4 +80,39 @@ rearUp: function(){
 rearDown: function(){
     this.rearGearIndex -=1;
 }
+
+}
+console.log(bike2.calculateGearRatio());
+//Calls the frontUp() function
+bike2.changeGear("front","Up");
+console.log(bike2.calculateGearRatio());
+//calls the rearUp() function
+bike2.changeGear("rear","Up");
+console.log(bike2.calculateGearRatio());
+
+bike2.isTandem = true;
+bike2.popAWheelie = function() {
 };
+const bike3 = new Bike();
+const bike4 = new Bike();
+bike3.isTandem = true;
+console.log(bike3.isTandem); // true
+console.log(bike4.isTandem); // undefined
+
+class Bike {
+    constructor(gears, startGear){
+        this.gears=gears;
+        this.currentGear = startGear;
+    }
+    changeGear(direction,changeBy){
+        if(direction === 'up'){
+            this.currentGear +=changeBy;
+        } else {
+            this.currentGear -=changeBy;
+        }
+    }
+}
+const bike5= new Bike(10,5);
+console.log(bike5.currentGear);
+bike5.changeGear('up',2);
+console.log(bike5.currentGear);
