@@ -55,8 +55,8 @@ const bike2={
         } else {
             this.rearGearIndex=newValue;
         }
-    }
-};
+    },
+
 // bike.frontGearIndex,
 // bike.transmission.frontGearTeeth,
 // bike.calculateGearRatio(),
@@ -80,3 +80,4 @@ rearUp: function(){
 rearDown: function(){
     this.rearGearIndex -=1;
 }
+};
