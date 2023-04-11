@@ -63,3 +63,20 @@ const bike2={
 // bike["frontGearIndex"],
 // bike["transmission"]["frontGearTeeth"],
 // bike["calculateGearRatio"]()
+
+changeGear: function(frontOrRear, upOrDown){
+    let shiftFunction = frontOrRear+upOrDown;
+    this[shiftFunction]();
+},
+frontUp: function(){
+    this.frontGearIndex += 1;
+},
+frontDown: function(){
+    this.frontGearIndex -= 1;
+},
+rearUp: function(){
+    this.rearGearIndex +=1;
+},
+rearDown: function(){
+    this.rearGearIndex -=1;
+}
