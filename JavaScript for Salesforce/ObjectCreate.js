@@ -16,6 +16,14 @@ console.log(bike1.currentGear);
 bike1.changeGear('up',1);
 console.log(bike1.currentGear);
 
+// declare function
+function calculateGearRatio(driverGear, drivenGear){
+    return (driverGear / drivenGear);
+  }
+  // call function
+  let gearRatio = calculateGearRatio(42, 30);
+  console.log(gearRatio); // 1.4
+
 //Create object with Constructor
 
 function Bike1(gears, startGear){
