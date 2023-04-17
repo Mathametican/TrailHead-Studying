@@ -122,5 +122,35 @@ const bike1={
     return (driverGear / drivenGear);
   }
   // call function
-  let gearRatio = calculateGearRatio(42, 30);
+  let gearRatio= calculateGearRatio(42, 30);
   console.log(gearRatio); // 1.4
+
+  // call function
+let gearRatio1 = calculateGearRatio1(90,30);
+// function is declared after the line it is called
+// this is allowed in function declaration
+function calculateGearRatio1(driverGear, drivenGear){
+  return (driverGear / drivenGear);
+}
+console.log(gearRatio1); // 3
+
+const calculateGearRatio2 = function(driverGear, drivenGear){
+    return (driverGear / drivenGear);
+  }
+  // the rest works the same
+  let gearRatio2 = calculateGearRatio2(60, 30);
+  console.log(gearRatio2); // 2
+
+  // when invoked, this function will assign a function
+function gearFactory(){
+    return function(driverGear, drivenGear){
+      return (driverGear / drivenGear);
+    }
+  }
+  // calculateGearRatio can now be invoked as a function
+  const calculateGearRatio3 = gearFactory();
+  // and all the rest
+
+  let myArray = [1, 5, 11, 17];
+let newArray = myArray.map( function(item){ return item / 2 } );
+console.log(newArray); // [0.5, 2.5, 5.5, 8.5]
