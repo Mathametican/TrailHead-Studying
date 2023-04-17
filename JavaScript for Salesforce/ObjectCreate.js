@@ -116,3 +116,11 @@ const bike5= new Bike(10,5);
 console.log(bike5.currentGear);
 bike5.changeGear('up',2);
 console.log(bike5.currentGear);
+
+// declare function
+function calculateGearRatio(driverGear, drivenGear){
+    return (driverGear / drivenGear);
+  }
+  // call function
+  let gearRatio = calculateGearRatio(42, 30);
+  console.log(gearRatio); // 1.4
