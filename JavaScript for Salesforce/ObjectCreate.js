@@ -154,3 +154,19 @@ function gearFactory(){
   let myArray = [1, 5, 11, 17];
 let newArray = myArray.map( function(item){ return item / 2 } );
 console.log(newArray); // [0.5, 2.5, 5.5, 8.5]
+
+let bike6 = {
+
+    calculateGearRatio4: function() {
+      let front = this.transmission.frontGearTeeth[this.frontGearIndex],
+      rear = this.transmission.rearGearTeeth[this.rearGearIndex];
+      return (front / rear);
+    },
+
+  }
+  console.log(bike6);
+
+  // invoke function and assign value to ratioResult
+let ratioResult = bike6.calculateGearRatio4();
+// assign calculateGearRatio function to a new pointer
+const ratioFunction = bike6.calculateGearRatio4;
