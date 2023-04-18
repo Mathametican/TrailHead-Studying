@@ -159,7 +159,7 @@ let bike6 = {
 
     calculateGearRatio4: function() {
       let front = this.transmission.frontGearTeeth[this.frontGearIndex],
-      rear = this.transmission.rearGearTeeth[this.rearGearIndex];
+      rear = this.transmission.rearGearTheeth[this.rearGearIndex];
       return (front / rear);
     },
 
@@ -170,3 +170,10 @@ let bike6 = {
 let ratioResult = bike6.calculateGearRatio4();
 // assign calculateGearRatio function to a new pointer
 const ratioFunction = bike6.calculateGearRatio4;
+
+var handleClick = function(event) {
+    console.log(event.type);  // click
+    console.log(event.currentTarget); // the thing you clicked
+    console.log(event.screenX); // screen X coordinate
+    console.log(event.screenY); // screen Y coordinate
+  }
