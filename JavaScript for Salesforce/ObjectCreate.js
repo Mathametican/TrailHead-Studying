@@ -177,3 +177,11 @@ var handleClick = function(event) {
     console.log(event.screenX); // screen X coordinate
     console.log(event.screenY); // screen Y coordinate
   }
+
+  let button = document.getElementById("clicker");
+  button.addEventListener("click", handleClick);
+  button.removeEventListener("click", handleClick);
+
+ function handleChange(event){
+    this.text = event.target.value;
+}
